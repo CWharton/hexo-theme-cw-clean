@@ -1,0 +1,171 @@
+.social-bar
+   background-color #171717
+   padding 3px 8px
+   &::after
+      content ""
+      display table
+      clear both
+   p
+      color rgba(255, 255, 255, 0.8)
+      float left
+      font-size 14px
+      font-weight 600
+      line-height 24px
+      padding 3px 0
+      text-transform uppercase;
+   .social-links
+      float right
+      li
+         line-height 24px
+         list-style outside none none
+         float left
+         margin-left 8px
+      a
+         color rgba(255, 255, 255, 0.5)
+         &:hover
+            color rgba(255, 255, 255, 0.8)
+      i
+         font-size 20px
+         padding 5px 3px
+
+.sidebar-categories
+   li a
+      border-bottom 1px solid color-border
+      color #666
+      padding 10px 0
+      display block
+      position relative
+      &:hover
+         color #000
+      &:before
+         content ""
+         font-family FontAwesome !important
+         font-size 8px
+         padding-right 10px
+         position relative
+         top -1px
+
+.blog-tags
+   ul
+      list-style outside none none
+      margin 0
+      padding 0
+   li
+      display inline-block
+      margin 0 16px 7px 0
+      position relative
+      i
+         color color-link
+         margin-right 5px
+         display inline-block
+      a
+         background #f5f5f5 none repeat scroll 0 0
+         color #555
+         display inline-block
+         padding 3px 5px 3px 3px
+         &:hover
+            color #fff
+            background color-link
+            text-decoration none
+            i
+               color #fff
+            &:after
+               border-left-color color-link
+         &:after
+            top 50%
+            width 0
+            left 100%
+            height 0
+            z-index 2
+            content " "
+            display block
+            margin-top -12px;
+            position absolute
+            border-left 12px solid #f5f5f5
+            border-top 12px solid transparent
+            border-bottom 12px solid transparent
+
+#sidebar
+  width 270px
+  border-right 1px solid color-border
+  @media screen and (max-width: 900px)
+    float none
+    width 100%
+  .widget
+    background #fff
+    margin-bottom 30px
+    word-wrap break-word
+    .title
+      padding 5px 5px
+      font-size 1em
+      font-weight bold
+
+    .entry
+      font-size 0.9em
+      padding 15px 20px
+
+    ul, ol, dl
+      list-style none
+      ul, ol, dl
+        list-style disc
+        margin-left 20px
+
+   .side-header
+      background #222
+      color #fff
+      text-align center
+      padding 10px 0
+      a
+         color #fff
+      .site-title
+         font-size 20px
+         display inline-block
+         line-height 36px
+      .site-subtitle
+         color #ddd
+         font-size 13px
+   .site-menu
+      margin 25px 5px
+      list-style-type none
+      i
+         font-size 1.4em
+         color color-link
+         margin-right 5px
+         display inline-block
+      li
+         padding 5px 0
+         border-bottom 1px solid color-border
+      a
+         color #666
+         &:hover
+            color #000
+  .search
+    margin-bottom 30px
+    input
+      background #fff
+      font-family font-title
+      font-style italic
+      font-size 1em
+      padding 10px 15px
+      border 1px solid color-border
+      width 100%
+      box-sizing border-box
+      color color-meta
+      &:focus
+        color color-font
+
+  .tag
+    small
+      margin-left 15px
+      color color-meta
+      &:before
+        content '('
+      &:after
+        content ')'
+
+  .tagcloud
+    .entry
+      padding-right 5px
+    a
+      margin-right 10px
+      display inline-block

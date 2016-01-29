@@ -1,0 +1,43 @@
+<div class="side-header">
+   <div class="site-title">
+      <a href="<%- config.root %>"><%= config.title %></a>
+   </div>
+   <div class=site-subtitle>
+      <% if (config.subtitle){ %><%= config.subtitle %><% } %>
+   </div>
+</div>
+<div class="social-bar">
+   <p>Follow:</p>
+   <ul class="social-links">
+      <% for (var i in theme.social_links) { %>
+         <% if (theme.social_links[i]) { %>
+            <li>
+               <a class="social-tooltip" title="<%= i %>" href="<%- url_for(theme.social_links[i]) %>" target="_blank">
+                  <i class="icon fa fa-<%= i %>"></i>
+               </a>
+            </li>
+         <% } %>
+      <% } %>
+   </ul>
+</div>
+
+<ul class="site-menu">
+   <% for (var i in theme.menu){ %>
+      <li>
+         <a href="<%- theme.menu[i] %>">
+            <% if (i.toLowerCase() == "home"){ %>
+               <i class="fa fa-home"></i>
+            <% } else if (i.toLowerCase() == "archives"){ %>
+               <i class="fa fa-archive"></i>
+            <% } else { %>
+               <i class="fa fa-file"></i>
+            <% } %>
+            <%= i %>
+         </a>
+      </li>
+   <% } %>
+</ul>
+
+<% theme.widgets.forEach(function(widget){ %>
+   <%- partial('../_widget/' + widget) %>
+<% }); %>

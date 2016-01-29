@@ -1,0 +1,32 @@
+menu:
+   Home: /
+   Archives: /archives
+
+widgets:
+- category
+- tag
+
+favicon: favicon.ico
+google_analytics:
+rss: /atom.xml
+
+social_links: # for more icons, please see http://fontawesome.io/icons/#brand
+   #<ICON>: <LINK>
+   twitter: https://twitter.com/cwhartoncom
+   github: https://github.com/cwharton
+   #bitbucket: https://bitbucket.org/cwharton/
+   #youtube-play: https://www.youtube.com/channel/UCCXXX6UGprDARjC67-6nlaQ
+   rss: /atom.xml
+
+social_share:
+   enable: true
+   facebook: true
+   facebook_appID: 1115469118503189
+   twitter: true
+   twitter_username: cwhartoncom
+   google: false
+   pinterest: true
+
+excerpt_link: Read More
+fancybox: true
+disqus_shortname: cwharton

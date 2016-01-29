@@ -1,0 +1,5 @@
+<% if (item.tags && item.tags.length){ %>
+  <% item.tags.forEach(function(tag, i){ %>
+    <%- link_to(tag.path, tag.name) %><% if (i != item.tags.length - 1){ %>,<% } %>
+  <% }); %>
+<% } %>
