@@ -4,10 +4,12 @@
       <h3 class="title"><%= __('categories') %></h3>
       <ul class="nav sidebar-categories">
          <% site.categories.forEach(function(cat){ %>
+            <% if (cat.length > 0){ %>
             <li>
                <a href="<%= url_for(cat.path) %>"><%= cat.name %>
                   (<%= cat.length  %>)</a>
             </li>
+            <% } %>
          <% }); %>
       </ul>
    </div>
